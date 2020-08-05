@@ -1,4 +1,4 @@
-#Twitter Clone
+# Twitter Clone
 
 This project is to demostrate the latest front-end technologies by creating a Twitter UI using following techologies.
 
