@@ -1,0 +1,182 @@
+@use '../vars';
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  height: 100%;
+  > div.menu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    height: 100%;
+    position: fixed;
+    > div {
+
+      width: 70px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      @media (min-width: vars.$screen-large) {
+        width: 300px;
+        align-items: flex-end;
+      }
+
+      > div {
+        margin-top: 32px;
+        display: flex;
+        > div {
+          font-size: 24px;
+          width: 40px;
+          display: flex;
+          justify-content: center;
+        }
+        > span {
+          font-size: 20px;
+          padding-left: 24px;
+          width: 180px;
+          display: none;
+          @media (min-width: vars.$screen-large) {
+            display: block;
+          }
+        }
+      }
+      > div.circle-bg {
+        div.bg {
+          position: absolute;
+          margin-top: 1px;
+          border-radius: 50%;
+          z-index: -1;
+          background-color: white;
+          width: 45px;
+          height: 45px;
+        }
+        div.new-tweet-icon {
+          font-size: 48px;
+          color: vars.$color-bg2;
+          @media (min-width: vars.$screen-large) {
+            display: none;
+          }
+        }
+        div.new-tweet-button {
+          border-radius: 48px;
+          width: 220px;
+          background-color: #1d8eee;
+          color: vars.$color-text;
+          margin-right: 25px;
+          font-size: 18px;
+          text-align: center;
+          padding: 15px 0;
+          display: none;
+          @media (min-width: vars.$screen-large) {
+            display: block;
+          }
+        }
+      }
+    }
+    > div.avatar {
+      display: flex;
+      padding-bottom: 20px;
+      cursor: pointer;
+      @media (min-width: vars.$screen-large) {
+        flex-direction: row;
+        align-items: center;
+        width: auto;
+        padding-right: 20px;
+      }
+      div.icon {
+        clip-path: circle(20px at center);
+      }
+      div.name {
+        padding-left: 20px;
+        display: none;
+        @media (min-width: vars.$screen-large) {
+          display: block;
+        }
+        div {
+          font-size: 16px;
+          width: 120px;
+          display: block;
+        }
+        // .display-name {
+          // font-weight: bold;
+        // }
+        .id {
+          color: #738393;
+        }
+      }
+      div.chevron {
+        font-size: 18px;
+        display: none;
+        @media (min-width: vars.$screen-large) {
+          display: block;
+        }
+      }
+    }
+  }
+  > div#account-popup {
+    position: fixed;
+    bottom: 70px;
+    left: 20px;
+    font-size: 15px;
+    width: 300px;
+    box-shadow: rgba(136, 153, 166, 0.2) 0px 0px 15px, rgba(136, 153, 166, 0.15) 0px 0px 3px 1px;
+    background-color: rgb(21, 32, 43);
+    border-radius: 15px;
+    display: none;
+    padding: 5px 0;
+    > div.profile {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 10px;
+      > div {
+        display: flex;
+        flex-direction: row;
+        > div.avatar {
+          > div {
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            background-size: cover;
+          }
+        }
+        > div.name {
+          display: block;
+          padding-left: 10px;
+          > div.display-name {
+            font-size: 15px;
+            font-weight: 500;
+          }
+          > div.id {
+            font-size: 15px;
+            color: vars.$color-text2;
+          }
+        }
+      }
+      > div.status {
+        padding: 0;
+      }
+    }
+    > div.menu {
+      > div {
+        padding: 15px 10px;
+        border-top: 1px solid vars.$color-text2;
+        &:hover {
+          background-color: vars.$color-bg-highlight;
+          cursor: pointer;
+        }
+      }
+    }
+    div.bg-mask {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+  }
+}

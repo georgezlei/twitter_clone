@@ -1,0 +1,32 @@
+[
+  {
+    "id": "@newsycombinator",
+    "name": "Hacker News",
+    "avatar": "https://pbs.twimg.com/profile_images/469397708986269696/iUrYEOpJ_normal.png",
+    "intro": "I'm a news.ycombinator bot, get the latest from Hacker News! Built by the lovely @riklomas from @superhi_ – sport shoes welcome.",
+    "location": "The Internet",
+    "website": "news.ycombinator.com",
+    "following": 2,
+    "followers": 209100
+  },
+  {
+    "id": "@NZStuff",
+    "name": "Stuff",
+    "avatar": "https://pbs.twimg.com/profile_images/1173357670847279104/UJG4QQfN_normal.jpg",
+    "intro": "Stuff is New Zealand's largest and most popular news site. Email newstips@stuff.co.nz.",
+    "location": "New Zealand",
+    "website": "stuff.co.nz",
+    "following": 780,
+    "followers": 204400
+  },
+  {
+    "id": "@johndoe",
+    "name": "John Doe",
+    "avatar": "https://pbs.twimg.com/profile_images/1244505480841420802/-yqmMG9-_normal.jpg",
+    "intro": "Someone who is intersting",
+    "location": "New Zealand",
+    "website": "",
+    "following": 10,
+    "followers": 1
+  }
+]

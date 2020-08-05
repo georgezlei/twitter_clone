@@ -5,6 +5,12 @@
       "noImplicitAny": true,
       "module": "commonjs",
       "target": "es6",
-      "jsx": "react"
+      "jsx": "react",
+      "resolveJsonModule": true,
+      "esModuleInterop": true,
+      "typeRoots": [
+        "src/customTypings",
+        "node_modules/@types"
+      ]
   }
 }

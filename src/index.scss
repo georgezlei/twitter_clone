@@ -1,5 +1,36 @@
+@use 'vars';
+
+html {
+  height: 100%;
+}
 body {
   margin: 0;
   padding: 0;
-  background-color: green;
+  height: 100%;
+  background-color: rgb(21, 32, 43);
+  color: white;
+  font-size: 50px;
+  font-family: 'Roboto', sans-serif;
+  #root {
+    display: flex;
+    height: 100%;
+    header {
+      width: 88px;
+      @media (min-width: vars.$screen-small) {
+        width: auto;
+        flex: 1;
+      }
+    }
+    .home {
+      flex: 1;
+      @media (min-width: vars.$screen-small) {
+        flex: auto;
+        width: 600px;
+        @media (min-width: vars.$screen-normal) {
+          width: 918px;
+        }
+      }
+    }
+  }
 }
+

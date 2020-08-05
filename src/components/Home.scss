@@ -1,0 +1,250 @@
+@use '../vars';
+
+main {
+  display: flex;
+  div.tweets {
+    width: 600px;
+    div.header {
+        border-left: 1px solid vars.$color-separation-line;
+        border-right: 1px solid vars.$color-separation-line;
+        border-bottom: 1px solid vars.$color-separation-line;
+        font-size: 25px;
+        font-weight: 700;
+        padding: 15px;
+        position: sticky;
+        top: 0;
+        background-color: vars.$color-bg;
+    }
+    div.input {
+      display: flex;
+      flex-direction: row;
+      border-left: 1px solid vars.$color-separation-line;
+      border-right: 1px solid vars.$color-separation-line;
+      border-bottom: 10px solid vars.$color-separation-line;
+      div.avatar {
+        padding: 10px 15px;
+        div.photo {
+          width: 44px;
+          height: 44px;
+          border-radius: 50%;
+        }
+      }
+      div.right {
+        flex: 1;
+        padding: 20px 15px 20px 0;
+        > div {
+          font-size: 20px;
+          div.default-text {
+            color: vars.$color-text2;
+            position: absolute;
+            z-index: -1;
+            margin: 0;
+          }
+          div.input-box {
+            outline: none;
+            margin: 0;
+          }
+        }
+        div.actions {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          div.media {
+            font-size: 20px;
+            color: vars.$color-highlight;
+            display: flex;
+            padding-top: 10px;
+            div {
+              border-radius: 50%;
+              width: 39px;
+              height: 39px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              &:hover {
+                background-color: vars.$color-bg-highlight;
+                cursor: pointer;
+              }
+            }
+          }
+          button {
+            width: 78px;
+            height: 38px;
+            border-radius: 19px;
+            border-width: 0;
+            background-color: vars.$color-bg2;
+            color: vars.$color-text;
+            outline: none;
+            cursor: pointer;
+            &:disabled {
+              background-color: vars.$color-bg2-disabled;
+            }
+          }
+        }
+      }
+    }
+    article {
+      border-left: 1px solid vars.$color-separation-line;
+      border-right: 1px solid vars.$color-separation-line;
+      border-bottom: 1px solid vars.$color-separation-line;
+      font-size: 14px;
+      &:hover {
+        background-color: vars.$color-bg-highlight;
+        cursor: pointer;
+      }
+      div.retweet-info {
+        padding: 10px 0 0 40px;
+        color: vars.$color-text2;
+        span {
+          padding-left: 10px;
+        }
+      }
+      div.main {
+        display: flex;
+        flex-direction: row;
+        > div.avatar {
+          padding: 10px 10px 0 15px;
+          div {
+            border-radius: 50%;
+            width: 48px;
+            height: 48px;
+          }
+        }
+        div.content {
+          padding: 10px 15px 10px 0;
+          flex: 1;
+          > div.info {
+            display: flex;
+            justify-content: space-between;
+            span.display-name {
+              font-weight: bold;
+            }
+            span.id {
+              color: vars.$color-text2;
+              padding-left: 5px;
+            }
+            span.separator {
+              color: vars.$color-text2;
+              padding: 0 5px;
+            }
+            span.time {
+              color: vars.$color-text2;
+            }
+          }
+          div.text {
+            padding: 5px 0;
+          }
+          div.entity {
+            border: 1px solid vars.$color-text2;
+            border-radius: 15px;
+            overflow: hidden;
+            color: vars.$color-text;
+            text-decoration: none;
+            margin-top: 10px;
+            &:hover {
+              background-color: vars.$color-bg-highlight2;
+            }
+          }
+          div.actions {
+            display: flex;
+            justify-content: space-between;
+            max-width: 425px;
+            margin-top: 10px;
+            div {
+              font-size: 18px;
+              color: vars.$color-text2;
+              display: flex;
+              div {
+                border-radius: 50%;
+                width: 40px;
+                height: 40px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                &:hover {
+                  background-color: vars.$color-bg-highlight2;
+                }
+              }
+              span {
+                padding: 9px 10px;
+              }
+            }
+          }
+        }
+      }
+    }
+    article.last {
+      height: 100px;
+    }
+  }
+}
+// Media
+div.entity {
+  width: 509px;
+  img {
+    object-fit: cover;
+    width: 100%;
+  }
+}
+// Quoted
+div.quoted {
+  display: block;
+  width: 489px;
+  padding: 10px;
+  > .headline {
+    display: flex;
+    > .avatar {
+      > div {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-size: cover;
+      }
+    }
+    .name {
+      padding-left: 5px;
+      font-weight: 700;
+    }
+    .screen-name {
+      padding-left: 5px;
+      color: vars.$color-text2;
+    }
+    .separator {
+      padding-left: 5px;
+      color: vars.$color-text2;
+    }
+    .time {
+      padding-left: 5px;
+      color: vars.$color-text2;
+    }
+  }
+}
+// URL
+div.url {
+  display: none;
+  div.photo {
+    width: 125px;
+    height: 125px;
+    background-size: cover;
+  }
+  div.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+    padding: 10px;
+    div.title {
+      max-width: 362px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    div.abstract {
+      color: vars.$color-text2;
+    }
+    div.website {
+      color: vars.$color-text2;
+      padding: 5px 0;
+    }
+  }
+}

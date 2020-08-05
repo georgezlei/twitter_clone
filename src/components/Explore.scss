@@ -1,0 +1,78 @@
+@use '../vars';
+
+div.explore {
+  display: none;
+  @media (min-width: vars.$screen-normal) {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 5px 20px 30px 30px;
+    width: 290px;
+    @media (min-width: 1078px) {
+      width: 350px;
+    }
+  }
+  div.search {
+    background-color: vars.$color-bg3;
+    border-radius: 9999px;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    position: fixed;
+    width: 290px;
+    @media (min-width: 1078px) {
+      width: 350px;
+    }
+    input {
+      width: 100%;
+      background-color: #0000;
+      border-color: #0000;
+      font-size: 17px;
+      padding-left: 20px;
+      outline: none;
+      color: vars.$color-text;
+    }
+  }
+  div.whats-happening {
+    margin-top: 57px;
+    background-color: vars.$color-bg-highlight;
+    border-radius: 15px;
+    div.caption {
+      font-size: 18px;
+      font-weight: bold;
+      padding: 15px;
+    }
+    div.show-more {
+      font-size: 15px;
+      padding: 15px;
+      color: vars.$color-highlight;
+      cursor: pointer;
+    }
+    div.link {
+      font-size: 15px;
+      border-top: 1px solid vars.$color-separation-line;
+      border-bottom: 1px solid vars.$color-separation-line;
+      padding: 15px;
+      display: flex;
+      &:hover {
+        background-color: vars.$color-bg-highlight2;
+        cursor: pointer;
+      }
+      div.category, div.tweets-number {
+        color: vars.$color-text2;
+      }
+      div.title {
+        font-weight: bold;
+        display: block;
+        padding: 5px 0;
+      }
+      div.image div {
+        border-radius: 15px;
+        width: 70px;
+        height: 70px;
+        background-size: cover;
+      }
+    }
+  }
+}
