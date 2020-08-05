@@ -1,8 +1,12 @@
-Template Project for React.js
+#Twitter Clone
 
-Following tools has been included and set up
+This project is to demostrate the latest front-end technologies by creating a Twitter UI using following techologies.
 
+* React.js
 * TypeScript
 * Webpack
 * Sass
-* Jest
+
+[Live Demostration](https://vigilant-golick-65c0c8.netlify.app/)
+
+
