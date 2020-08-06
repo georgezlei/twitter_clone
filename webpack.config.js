@@ -1,14 +1,22 @@
-var HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
     mode: "development",
 
-    plugins: [new HtmlWebpackPlugin({
-        template: __dirname + '/static/template.html',
-        favicon: __dirname + '/static/favicon.png',
-        filename: 'index.html',
-        inject: 'body'
-    })],
+    plugins: [
+        new HtmlWebpackPlugin({
+            template: __dirname + '/static/template.html',
+            favicon: __dirname + '/static/favicon.png',
+            filename: 'index.html',
+            inject: 'body'
+        }),
+        new CopyPlugin({
+            patterns: [
+                { from: 'static/_headers', to: '' }
+            ],
+        }),
+    ],
 
     resolve: {
         extensions: [".ts", ".tsx", ".js", ".jsx", "scss", "jpg"]
