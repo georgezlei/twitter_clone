@@ -9,7 +9,7 @@ div.explore {
     padding: 5px 20px 30px 30px;
     width: 290px;
     @media (min-width: 1078px) {
-      width: 350px;
+      max-width: 350px;
     }
   }
   div.search {
@@ -18,11 +18,11 @@ div.explore {
     font-size: 15px;
     display: flex;
     align-items: center;
-    padding: 10px 20px;
+    padding: 10px 25px;
     position: fixed;
     width: 290px;
     @media (min-width: 1078px) {
-      width: 350px;
+      max-width: 350px;
     }
     input {
       width: 100%;

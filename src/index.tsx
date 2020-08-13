@@ -10,8 +10,7 @@ import "./index.scss";
 import NavBar from './components/NavBar';
 import Home from './components/Home';
 
-const accessToken = '23445857-cuDqU4mIY51h6SDHHIcTdPaRz5nurS0xTY1FqWQzM';
-const accessTokenSecret = '4oVHk29IEzOgVRO4zqchynVJwS9N81RrixP6pGLWrUxe3';
+
 
 const IndexPage = () => {
     const [tweets, setTweets] = React.useState(rawTweets);
@@ -25,20 +24,7 @@ const IndexPage = () => {
         }
     };
 
-    React.useEffect(() => {
-        // fetch tweets
-        fetch('https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=georgezlei&count=20', {
-            headers: {
-                authorization: 'Bearer AAAAAAAAAAAAAAAAAAAAAEYTGQEAAAAAELHK5DgkGN2TSigeg4I89XqqwII%3DuokddIhesTSeZfxS8cpYZODv5Nke6g0UWQIDkCbHa9Jd0kSWUb'
-            }
-        }).then((data) => {
-            data.json().then((rawTweets) => {
-                setTweets(rawTweets as Tweet[]);
-            });
-        });
-        // fetch trends
-    });
-
+    
     return (
         <BrowserRouter>
             <TwitterContext.Provider value={initVal}>
