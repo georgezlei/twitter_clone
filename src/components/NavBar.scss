@@ -5,6 +5,11 @@ header {
   flex-direction: column;
   align-items: flex-end;
   height: 100%;
+  min-width: 70px;
+  @media (min-width: vars.$screen-large) {
+    min-width: 250px;
+  }
+
   > div.menu {
     display: flex;
     flex-direction: column;
@@ -19,7 +24,7 @@ header {
       flex-direction: column;
       align-items: center;
       @media (min-width: vars.$screen-large) {
-        width: 300px;
+        width: 250px;
         align-items: flex-end;
       }
 

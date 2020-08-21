@@ -15,7 +15,7 @@ body {
     margin: 0 auto;
     display: flex;
     height: 100%;
-    max-width: 1050px;
+    max-width: 1200px;
     header {
       width: 88px;
       @media (min-width: vars.$screen-small) {
@@ -29,7 +29,10 @@ body {
         flex: auto;
         width: 600px;
         @media (min-width: vars.$screen-normal) {
-          width: 918px;
+          width: 890px;
+          @media (min-width: vars.$screen-large) {
+            width: 950px;
+          }
         }
       }
     }

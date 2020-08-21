@@ -10,8 +10,6 @@ import "./index.scss";
 import NavBar from './components/NavBar';
 import Home from './components/Home';
 
-
-
 const IndexPage = () => {
     const [tweets, setTweets] = React.useState(rawTweets);
     const initVal = {
@@ -24,7 +22,6 @@ const IndexPage = () => {
         }
     };
 
-    
     return (
         <BrowserRouter>
             <TwitterContext.Provider value={initVal}>
